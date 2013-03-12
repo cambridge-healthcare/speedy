@@ -55,3 +55,39 @@ Time per request:       4.008 [ms] (mean)
 Time per request:       0.401 [ms] (mean, across all concurrent requests)
 Transfer rate:          640.75 [Kbytes/sec] received
 ```
+
+## E 0.4.2
+
+https://speakerdeck.com/slivu/espresso-framework
+
+After having read this: https://speakerdeck.com/slivu/ruby-handling-1-million-concurrent-connections
+
+```sh
+Concurrency Level:      10
+Time taken for tests:   0.250 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      154000 bytes
+HTML transferred:       18000 bytes
+Requests per second:    4007.86 [#/sec] (mean)
+Time per request:       2.495 [ms] (mean)
+Time per request:       0.250 [ms] (mean, across all concurrent requests)
+Transfer rate:          602.74 [Kbytes/sec] received
+```
+
+This was way too exciting, so I went with 2 unicorn workers:
+
+```sh
+Concurrency Level:      100
+Time taken for tests:   18.774 seconds
+Complete requests:      100000
+Failed requests:        0
+Write errors:           0
+Total transferred:      15408606 bytes
+HTML transferred:       1800990 bytes
+Requests per second:    5326.38 [#/sec] (mean)
+Time per request:       18.774 [ms] (mean)
+Time per request:       0.188 [ms] (mean, across all concurrent requests)
+Transfer rate:          801.49 [Kbytes/sec] received
+```
