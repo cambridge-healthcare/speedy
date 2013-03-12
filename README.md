@@ -26,6 +26,20 @@ Transfer rate:          268.99 [Kbytes/sec] received
 
 ## Grape 0.3.2
 
+```sh
+Concurrency Level:      10
+Time taken for tests:   0.504 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      161000 bytes
+HTML transferred:       18000 bytes
+Requests per second:    1983.39 [#/sec] (mean)
+Time per request:       5.042 [ms] (mean)
+Time per request:       0.504 [ms] (mean, across all concurrent requests)
+Transfer rate:          311.84 [Kbytes/sec] received
+```
+
 ## Sinatra 1.3.5
 
 ```sh
