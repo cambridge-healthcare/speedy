@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+APP="speedy"
+HOSTS="howareyou.vagrant"
+PORT="9007"
