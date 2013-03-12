@@ -1,7 +1,4 @@
 require 'grape'
-require 'oj'
-
-Oj.mimic_JSON
 
 module Speedy
   class API < Grape::API
