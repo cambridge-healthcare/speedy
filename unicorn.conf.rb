@@ -16,7 +16,7 @@ worker_processes ENV.fetch('API_INSTANCES', 1).to_i
 # The shorter backlog ensures quicker failover when busy, and helps the
 # load balancer spread requests evenly.
 listen ENV.fetch('PORT', 9007), backlog: ENV.fetch('TCP_BACKLOG', 1024).to_i
-listen ENV.fetch('SOCKET','/tmp/cds.api.sock'), :backlog => ENV.fetch('UNIX_BACKLOG', 1024).to_i
+listen ENV.fetch('SOCKET','/tmp/speedy.api.sock'), :backlog => ENV.fetch('UNIX_BACKLOG', 1024).to_i
 
 # Sets the timeout of worker processes to seconds. Workers handling the
 # request/app.call/response cycle taking longer than this time period
